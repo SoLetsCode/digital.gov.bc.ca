@@ -1,3 +1,5 @@
+/* TODO: Remove the this file and move content in
+ the nav.js styled component file */
 header {
     -moz-box-shadow: 0 6px 8px -4px #b3b1b3;
     -webkit-box-shadow: 0 6px 8px -4px #b3b1b3;
@@ -8,19 +10,14 @@ header {
     display: flex;
     padding: 0 30px 0 30px;
     position: fixed;
-    top: 0;
+    top: 45px;
     width: 100%;
     z-index: 1000;
   }
-  
-  header h1 {
-    font-family: ‘BC Sans’, ‘Noto Sans’, Verdana, Arial, sans-serif;
-    font-weight: normal;  /* 400 */
-    margin: 0px 5px 0px 25px;
-  }
-  
-  .titleText {
-      color: white;
+
+  .centerBanner {
+    margin: auto;
+    width: 1115px;
   }
 
   header .banner {
@@ -29,7 +26,7 @@ header {
     display: flex;
     height: 65px;
     justify-content: flex-start;
-    margin: 0 -10px 0 0;
+    margin: auto;
   }
   
   header .other {
@@ -64,13 +61,15 @@ header {
     color: #fcba19;
     display: none;
     position: fixed;
-    top: 67px;
+    top: 111px;
     width: 100%;
     z-index: 1000;
   }
 
   .navigation-main .container {
-    padding: 10px 0 10px 0;
+    margin: auto;
+    padding: 10px 0 10px 0px;
+    width: 1065px;
   }
   
   .navigation-main .container ul {
@@ -159,21 +158,13 @@ header {
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 899px) {
-    header h1 {
-      font-size: 18px;
-      visibility: visible;
+  @media screen and (max-width: 1120px) {
+    header {
+      top:64px;
     }
-
-    
-  }
-  
-  @media screen and (min-width: 900px) {
-    header h1 {
-      font-size: 2.0em;
-      visibility: visible;
+    .navigation-main {
+      top: 130px;
     }
-
   }
 
   @media screen and (max-width: 800px) {
@@ -184,9 +175,8 @@ header {
       margin-top: -5px;
     }
 
-    header h1 {
-      font-size: 18px;
-      visibility: visible;
+    .centerBanner {
+      display: flex;
     }
 
     .navigation-main .container ul {
@@ -194,11 +184,19 @@ header {
     }
   }
 
-  @media screen and (max-width: 400px) {
-    header h1 {
-      font-size: 12pt;
-      margin: 0px 5px 0px -5%;
+  @media screen and (min-width: 280px) and (max-width: 430px) {
+    header {
+      top:121px;
     }
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 596px) {
+    header {
+      top:100px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
 
     .navImage {
       margin-left: -15px;

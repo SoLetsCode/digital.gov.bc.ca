@@ -1,3 +1,5 @@
+/* TODO: Finish migrating this to the card.js styled components */
+
 .cardBody {
     font-size: 16pt;
     margin-bottom: 20px;
@@ -7,15 +9,6 @@
 .cardBodyHorizontal {
     height: 330px;
     margin-bottom: 20px;
-}
-
-.cardDescription {
-    font-weight: normal;
-    padding-bottom: 25px;
-}
-
-.cardDescriptionHorizontal {
-    font-weight: normal;
 }
 
 .cardImage {
@@ -30,11 +23,19 @@
     overflow: hidden;
 }
 
+.cardImageContainerHorizontal {
+    float: left;
+    margin-right: 25px;
+    overflow: hidden;
+    width: 50%;
+}
+
 .cardImageHorizontal {
     float: left;
-    height: 400px;
+    height: auto;
     margin-right: 30px;
-    width: 50%;
+    max-width: 110%;
+    width: auto;
 }
 
 .cardLink {
@@ -47,6 +48,11 @@
     text-decoration: underline;
 }
 
+.cardLink:hover {
+    color: blue;
+    text-decoration: none;
+}
+
 .cardLinkHorizontal {
     bottom: 20px;
     color: #1a5a96;
@@ -54,11 +60,6 @@
     font-size: 16px;
     font-weight: bold;
     text-decoration: underline;
-}
-
-.cardLink:hover {
-    color: blue;
-    text-decoration: none;
 }
 
 .cardText {
@@ -69,22 +70,6 @@
 .cardTextHorizontal {
     padding: 16px;
     text-align: left;
-}
-
-.cardTitle {
-    font-family: 'BC Sans';
-    font-size: 31px;
-    font-weight: bold;
-    line-height: 44px;
-    position: relative;
-}
-
-.cardTitleHorizontal {
-    font-family: 'BC Sans';
-    font-size: 31px;
-    font-weight: bold;
-    line-height: 41px;
-    position: relative;
 }
 
 .overFlowHidden {
@@ -102,14 +87,6 @@
         width: 330px;
     }
 
-    .cardDescription {
-        font-weight: normal;
-    } 
-
-    .cardDescriptionHorizontal {
-        font-weight: normal;
-    }
-
     .cardImage {
         height: 330px;
         margin-left: -45%;
@@ -121,10 +98,15 @@
         max-height: 330px;
     }
 
-    .cardImageHorizontal {
-        height: 330px;
-        margin-right: 0;
+    .cardImageContainerHorizontal {
+        overflow: hidden;
         width: 100%;
+    }
+
+    .cardImageHorizontal {
+        height: auto;
+        max-width: 100%;
+        margin-right: 0;
     }
 
     .cardLink {
@@ -135,12 +117,5 @@
         bottom: 10px;
     }
 
-    .cardTitle {
-        font-size: 22px;
-        margin-top: -10px;
-    }
-
-    .cardTitleHorizontal {
-        font-size: 22px;
-    }   
+   
 }

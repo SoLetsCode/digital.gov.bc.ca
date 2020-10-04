@@ -4,6 +4,8 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import { NavTitle } from '../StyleComponents/nav';
+
 const mobileImg = require('../../images/logo-banner.png');
 const desktopImg = require('../../images/logo.png');
 
@@ -54,28 +56,30 @@ function NavBar() {
 
   return (
     <div className="navBar">
-      <header>
-        <div className="banner">
-          <a
-            href="https://gov.bc.ca"
-            alt="Go to the Government of British Columbia website"
-          >
-            <img
-              className="navImage"
-              src={logoPath}
+      <header id="navheader">
+        <div className="centerBanner">
+          <div className="banner">
+            <a
+              href="https://gov.bc.ca"
               alt="Go to the Government of British Columbia website"
-            />
-          </a>
-          <h1 className="titleText">Digital Government</h1>
-        </div>
-        <div className="other">
-          <div className="nav-btn" onClick={toggleMenu} href=".">
-            <FontAwesomeIcon icon={faBars} />
+            >
+              <img
+                className="navImage"
+                src={logoPath}
+                alt="Go to the Government of British Columbia website"
+              />
+            </a>
+            <NavTitle>Digital Government</NavTitle>
           </div>
-          {/* <!-- 
-                This place is for anything that needs to be right aligned
-                beside the logo.
-                --> */}
+          <div className="other">
+            <div className="nav-btn" onClick={toggleMenu} href=".">
+              <FontAwesomeIcon icon={faBars} />
+            </div>
+            {/* <!-- 
+                  This place is for anything that needs to be right aligned
+                  beside the logo.
+                  --> */}
+          </div>
         </div>
       </header>
       <nav className="navigation-main" id="navbar">

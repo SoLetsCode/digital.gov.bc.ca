@@ -6,6 +6,8 @@ import '../../css/card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
+import { CardTitle, CardDescription } from '../StyleComponents/card';
+
 function InfoCard({
   height,
   routePath,
@@ -15,8 +17,6 @@ function InfoCard({
   title,
   description,
 }) {
-  let cardHeight = 0;
-
   var isRouteCard = false;
 
   if (routePath != null) {
@@ -30,22 +30,18 @@ function InfoCard({
         className="cardBody overFlowHidden"
         cover={
           <div className="cardImageContainer">
-            <img className="cardImage" alt="example" src={img} />
+            <img className="cardImage" alt="" src={img} />
           </div>
         }
       >
         <div className="cardText">
-          <div>
-            <h2 className="cardTitle">{title}</h2>
-          </div>
-          <div className="cardDescription">
-            <p>{description}</p>
-          </div>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
             ) : (
-              <a href={linkPath} target="_blank">
+              <a href={linkPath} target="_blank" rel="noopener noreferrer">
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon
@@ -63,17 +59,13 @@ function InfoCard({
     return (
       <Card className="cardBody" style={{ height: '95%', width: '100%' }}>
         <div className="cardText">
-          <div>
-            <h2 className="cardTitle">{title}</h2>
-          </div>
-          <div className="cardDescription">
-            <p>{description}</p>
-          </div>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{description}</CardDescription>
           <div className="cardLink">
             {isRouteCard ? (
               <Link to={routePath}>{linkText}</Link>
             ) : (
-              <a href={linkPath} target="_blank">
+              <a href={linkPath} target="_blank" rel="noopener noreferrer">
                 {linkText}
                 {linkPath && (
                   <FontAwesomeIcon

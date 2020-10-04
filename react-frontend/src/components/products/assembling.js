@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Row, Grid } from 'react-flexbox-grid';
 import ProductsCard from './productscard';
+import { ProductPageSubHeading } from '../StyleComponents/headings';
 
 const cards = [
   <div className="cardContent">
@@ -9,6 +10,7 @@ const cards = [
         className="productCardLink"
         href="https://bcdevexchange.org/ExchangeLab"
         target="_blank"
+        rel="noopener noreferrer"
       >
         The Exchange Lab
       </a>{' '}
@@ -33,6 +35,7 @@ const cards = [
         className="productCardLink"
         href="https://www.bcdevexchange.org/DevOpsPlatform"
         target="_blank"
+        rel="noopener noreferrer"
       >
         DevOps Container Platform
       </a>
@@ -47,6 +50,7 @@ const cards = [
         className="productCardLink"
         href="https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/im-it-capital-investment"
         target="_blank"
+        rel="noopener noreferrer"
       >
         IM/IT Capital Investment
       </a>{' '}
@@ -58,9 +62,9 @@ const cards = [
 const Assembling = () => {
   return (
     <div className="definingContainer">
-      <div>
-        <p className="productsSubtitle">Assembling and supporting your team</p>
-      </div>
+      <ProductPageSubHeading>
+        Assembling and supporting your team
+      </ProductPageSubHeading>
       <p>
         Whatever technology solution you decide to pursue, you will need a team
         of people with all the skills necessary to implement and maintain it.
